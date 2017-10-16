@@ -2,7 +2,7 @@ var Discord = require('discord.io');
 var simpleCommands = require("./simpleCommands.js");
 var advancedCommands = require("./advancedCommands.js");
 var tokens = require('./tokens.js');
-var initializer = '!animu';
+var initializer = '!kitsu';
 
 var bot = new Discord.Client({
     token: tokens.botToken,
@@ -10,7 +10,7 @@ var bot = new Discord.Client({
 });
 
 
- 
+
 bot.on('ready', function() {
     console.log('Logged in as %s - %s\n', bot.username, bot.id);
 });
@@ -19,8 +19,8 @@ bot.on('message', function(user, userID, channelID, message, event) {
     message.toLowerCase;
     if(message.startsWith(initializer)){
         var command = message.split(" ");
-        var path = command[0].split("."); 
-        //remove !animu
+        var path = command[0].split(".");
+        //remove !kitsu
         command.shift();
         path.shift();
 
@@ -33,7 +33,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
                 replyPromise.then(
                     success => reply(channelID,success),
                     failure => reply(channelID, error(path,command))
-                );       
+                );
             }else{
                 replyMsg = simpleCommands[command[0]]();
                 reply(channelID, replyMsg);
@@ -42,7 +42,7 @@ bot.on('message', function(user, userID, channelID, message, event) {
             replyMsg = error(path,command);
             reply(channelID, replyMsg);
         }
-        
+
     }
 });
 

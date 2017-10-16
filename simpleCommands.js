@@ -3,10 +3,9 @@ module.exports = {
         var reply = {
             title: 'Help overview',
             description: 'List off available commands\n'+
-            '-!animu help\n'+
-            '-!animu.manga <*MangaName*>\n'+
-            '-!animu.anime <*AnimeName*>\n'+
-            '-!animu.animeList <*username*>'
+            '-!kitsu help\n'+
+            '-!kitsu.manga <*MangaName*>\n'+
+            '-!kitsu.anime <*AnimeName*>'
         };
         return reply;
     }
