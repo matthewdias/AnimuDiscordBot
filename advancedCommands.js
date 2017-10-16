@@ -7,7 +7,7 @@ var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 var xhr = new XMLHttpRequest();
 
 module.exports = {
-    manga: async function(param) {
+    manga: async (param) => {
         var res = await kitsu.get('manga?filter[text]=' + param);
         var dataRes = res.data[0];
 
@@ -50,7 +50,7 @@ module.exports = {
         };
         return reply;
     },
-    anime: async function(param) {
+    anime: async (param) => {
         var res = await kitsu.get('anime?filter[text]=' + param);
         var dataRes = res.data[0];
 
