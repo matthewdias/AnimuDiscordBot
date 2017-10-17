@@ -17,7 +17,7 @@ module.exports = {
         replyData.title = String(dataRes.canonicalTitle) ? String(dataRes.canonicalTitle) : "undefined";
         replyData.description = String(dataRes.synopsis) ? String(dataRes.synopsis) : "undefined";
         replyData.rating = String(dataRes.averageRating) ? String(dataRes.averageRating) : "undefined";
-        replyData.age = String(dataRes.ageRatingGuide) ? String(dataRes.averageRating) : "undefined";
+        replyData.age = String(dataRes.ageRatingGuide) ? String(dataRes.ageRatingGuide) : "undefined";
         replyData.chapters = String(dataRes.chapterCount) ? String(dataRes.chapterCount) : "undefined";
         replyData.status = String(dataRes.status) ? String(dataRes.status) : "undefined";
 
@@ -60,7 +60,7 @@ module.exports = {
         replyData.title = String(dataRes.canonicalTitle) ? String(dataRes.canonicalTitle) : "undefined";
         replyData.description = String(dataRes.synopsis) ? String(dataRes.synopsis) : "undefined";
         replyData.rating = String(dataRes.averageRating) ? String(dataRes.averageRating) : "undefined";
-        replyData.age = String(dataRes.ageRatingGuide) ? String(dataRes.averageRating) : "undefined";
+        replyData.age = String(dataRes.ageRatingGuide) ? String(dataRes.ageRatingGuide) : "undefined";
         replyData.epiCount = String(dataRes.episodeCount) ? String(dataRes.episodeCount) : "undefined";
         replyData.epiLength = String(dataRes.episodeLength) ? String(dataRes.episodeLength) : "undefined";
         replyData.nsfw = String(dataRes.nsfw) ? String(dataRes.nsfw) : "undefined";
