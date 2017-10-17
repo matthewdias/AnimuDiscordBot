@@ -15,6 +15,7 @@ module.exports = {
         var replyData = {};
         replyData.url = String(dataRes.posterImage.tiny) ? String(dataRes.posterImage.tiny) : "undefined";
         replyData.title = String(dataRes.canonicalTitle) ? String(dataRes.canonicalTitle) : "undefined";
+        replyData.slug = String(dataRes.slug) ? String(dataRes.slug) : "undefined";
         replyData.description = String(dataRes.synopsis) ? String(dataRes.synopsis) : "undefined";
         replyData.rating = String(dataRes.averageRating) ? String(dataRes.averageRating) : "undefined";
         replyData.age = String(dataRes.ageRatingGuide) ? String(dataRes.ageRatingGuide) : "undefined";
@@ -24,6 +25,7 @@ module.exports = {
         var thumbImg = {url : replyData.url};
         var reply = {
             title: replyData.title,
+            url: `https://kitsu.io/manga/${replyData.slug}`,
             description: replyData.description,
             color: 0x00ff00,
             thumbnail: thumbImg,
@@ -58,6 +60,7 @@ module.exports = {
         var replyData = {};
         replyData.url = String(dataRes.posterImage.tiny) ? String(dataRes.posterImage.tiny) : "undefined";
         replyData.title = String(dataRes.canonicalTitle) ? String(dataRes.canonicalTitle) : "undefined";
+        replyData.slug = String(dataRes.slug) ? String(dataRes.slug) : "undefined";
         replyData.description = String(dataRes.synopsis) ? String(dataRes.synopsis) : "undefined";
         replyData.rating = String(dataRes.averageRating) ? String(dataRes.averageRating) : "undefined";
         replyData.age = String(dataRes.ageRatingGuide) ? String(dataRes.ageRatingGuide) : "undefined";
@@ -70,6 +73,7 @@ module.exports = {
         var thumbImg = {url : replyData.url};
         var reply = {
             title: replyData.title,
+            url: `https://kitsu.io/manga/${replyData.slug}`,
             description: replyData.description,
             color: 0x00ff00,
             thumbnail: thumbImg,
