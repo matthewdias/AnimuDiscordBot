@@ -73,7 +73,7 @@ module.exports = {
         var thumbImg = {url : replyData.url};
         var reply = {
             title: replyData.title,
-            url: `https://kitsu.io/manga/${replyData.slug}`,
+            url: `https://kitsu.io/anime/${replyData.slug}`,
             description: replyData.description,
             color: 0x00ff00,
             thumbnail: thumbImg,
